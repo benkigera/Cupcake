@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright (C) 2020 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,6 +19,7 @@
     tools:context=".SummaryFragment">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.example.cupcake.model.OrderViewModel" />
@@ -54,11 +54,11 @@
 
                 <TextView
                     android:id="@+id/quantity"
-                    android:text="@{viewModel.quantity.toString()}"
                     style="@style/Widget.Cupcake.TextView.OrderSummary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/order_summary_margin"
+                    android:text="@{viewModel.quantity.toString()}"
                     tools:text="6 cupcakes" />
 
                 <View
@@ -78,11 +78,11 @@
 
                 <TextView
                     android:id="@+id/flavor"
-                    android:text="@{viewModel.flavor}"
                     style="@style/Widget.Cupcake.TextView.OrderSummary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/order_summary_margin"
+                    android:text="@{viewModel.flavor}"
                     tools:text="Chocolate" />
 
                 <View
@@ -102,11 +102,11 @@
 
                 <TextView
                     android:id="@+id/date"
-                    android:text="@{viewModel.date}"
                     style="@style/Widget.Cupcake.TextView.OrderSummary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/order_summary_margin"
+                    android:text="@{viewModel.date}"
                     tools:text="Sunday" />
 
                 <View
@@ -124,6 +124,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_marginTop="@dimen/side_margin"
+                    android:text="@{@string/total_price(viewModel.price)}"
                     tools:text="Total $5.00" />
 
             </LinearLayout>
